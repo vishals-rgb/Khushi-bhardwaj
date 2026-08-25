@@ -17,12 +17,25 @@
 
         body {
             min-height: 100vh;
+
             font-family: Georgia, "Times New Roman", serif;
 
             background:
-                radial-gradient(circle at 10% 20%, #ffffff 0 2px, transparent 3px),
-                radial-gradient(circle at 80% 30%, #ffffff 0 2px, transparent 3px),
-                radial-gradient(circle at 40% 80%, #ffffff 0 2px, transparent 3px),
+                radial-gradient(
+                    circle at 10% 20%,
+                    #ffffff 0 2px,
+                    transparent 3px
+                ),
+                radial-gradient(
+                    circle at 80% 30%,
+                    #ffffff 0 2px,
+                    transparent 3px
+                ),
+                radial-gradient(
+                    circle at 40% 80%,
+                    #ffffff 0 2px,
+                    transparent 3px
+                ),
                 linear-gradient(
                     135deg,
                     #fff3f7,
@@ -31,6 +44,7 @@
                 );
 
             color: #5b1737;
+
             overflow-x: hidden;
         }
 
@@ -38,41 +52,50 @@
         /* MAIN SECTION */
 
         .hero {
+
             min-height: 100vh;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             padding: 25px;
         }
 
 
-        /* CARD */
+        /* MAIN CARD */
 
         .card {
+
             width: min(900px, 95vw);
 
-            padding: 45px 30px;
+            padding: 50px 30px;
 
             text-align: center;
 
             border-radius: 35px;
 
-            background: rgba(255, 255, 255, 0.65);
+            background:
+                rgba(255, 255, 255, 0.65);
 
             backdrop-filter: blur(15px);
 
-            border: 1px solid rgba(255, 255, 255, 0.9);
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.9);
 
             box-shadow:
-                0 30px 80px rgba(120, 30, 70, 0.18);
+                0 30px 80px
+                rgba(120, 30, 70, 0.18);
         }
 
 
-        /* SMALL TEXT */
+        /* SMALL TOP TEXT */
 
         .small-text {
+
             font-family: Arial, sans-serif;
 
             font-size: 12px;
@@ -83,118 +106,84 @@
 
             color: #a94b70;
 
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
 
-        /* TITLE */
+        /* MAIN TITLE */
 
         h1 {
-            font-size: clamp(45px, 8vw, 85px);
+
+            font-size:
+                clamp(45px, 8vw, 85px);
 
             line-height: 0.95;
 
             color: #d64276;
 
-            margin-bottom: 20px;
+            margin-bottom: 22px;
 
             text-shadow:
-                0 5px 20px rgba(214, 66, 118, 0.18);
+                0 5px 20px
+                rgba(214, 66, 118, 0.18);
         }
 
 
         /* SUBTITLE */
 
         .subtitle {
+
             font-family: Arial, sans-serif;
 
             font-size: 18px;
 
             color: #7b4960;
 
-            margin-bottom: 25px;
-        }
-
-
-        /* AGE */
-
-        .age {
-            width: 115px;
-            height: 115px;
-
-            margin: 0 auto 30px;
-
-            border-radius: 50%;
-
-            display: flex;
-            flex-direction: column;
-
-            justify-content: center;
-            align-items: center;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #ffffff,
-                    #ffd0df
-                );
-
-            border: 2px solid #f08bab;
-
-            box-shadow:
-                0 10px 30px rgba(210, 62, 111, 0.20);
-
-            color: #c92f68;
-
-            font-family: Arial, sans-serif;
-
-            font-size: 34px;
-
-            font-weight: bold;
-
-            animation: floating 3s ease-in-out infinite;
-        }
-
-
-        .age span {
-            font-size: 11px;
-
-            letter-spacing: 3px;
-
-            margin-top: 3px;
+            margin-bottom: 35px;
         }
 
 
         /* MESSAGE BOX */
 
         .message {
+
             max-width: 750px;
 
             margin: auto;
 
-            padding: 35px 25px;
+            padding: 40px 28px;
 
             border-radius: 25px;
 
-            background: rgba(255, 244, 248, 0.95);
+            background:
+                rgba(255, 244, 248, 0.95);
 
-            border: 1px solid #f5c4d3;
+            border:
+                1px solid
+                #f5c4d3;
 
             box-shadow:
-                0 10px 30px rgba(180, 60, 100, 0.08);
+                0 10px 30px
+                rgba(180, 60, 100, 0.08);
         }
 
 
+        /* MESSAGE HEADING */
+
         .message h2 {
+
             font-size: 30px;
 
             color: #ca356d;
 
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
 
+        /* MESSAGE TEXT */
+
         .message p {
+
             font-size: 18px;
 
             line-height: 1.9;
@@ -206,7 +195,8 @@
         /* BUTTON */
 
         .surprise-btn {
-            margin-top: 25px;
+
+            margin-top: 28px;
 
             padding: 15px 30px;
 
@@ -227,26 +217,30 @@
             cursor: pointer;
 
             box-shadow:
-                0 10px 25px rgba(217, 66, 119, 0.3);
+                0 10px 25px
+                rgba(217, 66, 119, 0.3);
 
             transition: 0.25s;
         }
 
 
         .surprise-btn:hover {
+
             transform:
                 translateY(-3px)
                 scale(1.04);
 
             box-shadow:
-                0 15px 35px rgba(217, 66, 119, 0.4);
+                0 15px 35px
+                rgba(217, 66, 119, 0.4);
         }
 
 
         /* SURPRISE MESSAGE */
 
         #surprise {
-            margin-top: 25px;
+
+            margin-top: 28px;
 
             font-size: 20px;
 
@@ -254,7 +248,8 @@
 
             color: #b72e60;
 
-            animation: fadeIn 0.7s ease;
+            animation:
+                fadeIn 0.7s ease;
         }
 
 
@@ -266,7 +261,8 @@
         /* FOOTER */
 
         .footer {
-            margin-top: 25px;
+
+            margin-top: 28px;
 
             font-family: Arial, sans-serif;
 
@@ -279,6 +275,7 @@
         /* FLOATING EMOJIS */
 
         .floating-heart {
+
             position: fixed;
 
             bottom: -50px;
@@ -294,9 +291,12 @@
         }
 
 
+        /* FLOATING ANIMATION */
+
         @keyframes rise {
 
             0% {
+
                 transform:
                     translateY(0)
                     rotate(0deg);
@@ -305,19 +305,22 @@
             }
 
             100% {
+
                 transform:
                     translateY(-110vh)
                     rotate(40deg);
 
                 opacity: 0;
             }
-
         }
 
+
+        /* FADE ANIMATION */
 
         @keyframes fadeIn {
 
             from {
+
                 opacity: 0;
 
                 transform:
@@ -325,77 +328,67 @@
             }
 
             to {
+
                 opacity: 1;
 
                 transform:
                     translateY(0);
             }
-
         }
 
 
-        @keyframes floating {
-
-            0%,
-            100% {
-                transform:
-                    translateY(0);
-            }
-
-            50% {
-                transform:
-                    translateY(-8px);
-            }
-
-        }
-
-
-        /* MOBILE */
+        /* MOBILE DESIGN */
 
         @media (max-width: 600px) {
 
             .hero {
+
                 padding: 12px;
             }
 
 
             .card {
-                padding: 35px 15px;
 
-                border-radius: 25px;
+                padding:
+                    40px 15px;
+
+                border-radius:
+                    25px;
             }
 
 
             h1 {
-                font-size: 48px;
+
+                font-size:
+                    48px;
             }
 
 
             .subtitle {
-                font-size: 16px;
+
+                font-size:
+                    16px;
             }
 
 
             .message {
-                padding: 25px 15px;
+
+                padding:
+                    28px 15px;
             }
 
 
             .message h2 {
-                font-size: 25px;
+
+                font-size:
+                    25px;
             }
 
 
             .message p {
-                font-size: 16px;
-            }
 
-
-            .age {
-                width: 100px;
-                height: 100px;
-
-                font-size: 30px;
+                font-size:
+                    16px;
             }
 
         }
@@ -410,54 +403,56 @@
 
     <section class="hero">
 
+
         <div class="card">
 
 
-            <!-- TOP -->
+            <!-- TOP TEXT -->
 
             <div class="small-text">
+
                 A Little Birthday Surprise ✨
+
             </div>
 
 
+            <!-- NAME -->
+
             <h1>
+
                 Happy Birthday
                 <br>
+
                 Nameera Ji 💗
+
             </h1>
 
 
+            <!-- SUBTITLE -->
+
             <div class="subtitle">
-                To someone truly cute, kind & special 🌸
-            </div>
 
-
-            <!-- AGE -->
-
-            <div class="age">
-
-                21
-
-                <span>
-                    YEARS
-                </span>
+                To someone truly cute,
+                kind & special 🌸
 
             </div>
 
 
-            <!-- MESSAGE -->
+            <!-- BIRTHDAY MESSAGE -->
 
             <div class="message">
 
 
                 <h2>
+
                     For You, Nameera Ji 🌷
+
                 </h2>
 
 
                 <p>
 
-                    May your 21st birthday bring you
+                    May your birthday bring you
                     endless smiles, beautiful memories,
                     lots of love and all the happiness
                     you truly deserve. 💗
@@ -468,6 +463,9 @@
                     May every new day bring you
                     closer to your dreams.
 
+                    <br>
+                    <br>
+
                     Keep smiling,
                     keep shining,
                     and always stay this cute. ✨
@@ -476,13 +474,12 @@
                     <br>
 
                     You deserve nothing but the
-                    best in life. 💕
-
+                    very best in life. 💕
 
                 </p>
 
 
-                <!-- BUTTON -->
+                <!-- SURPRISE BUTTON -->
 
                 <button
                     class="surprise-btn"
@@ -493,14 +490,14 @@
                 </button>
 
 
-                <!-- HIDDEN MESSAGE -->
+                <!-- HIDDEN SURPRISE -->
 
                 <div
                     id="surprise"
                     class="hidden">
 
 
-                    🎈 21 looks beautiful on you! 🎈
+                    🎈 A little surprise for you! 🎈
 
                     <br>
                     <br>
@@ -538,6 +535,7 @@
 
         </div>
 
+
     </section>
 
 
@@ -547,9 +545,7 @@
         function openSurprise() {
 
 
-            /*
-                Show hidden birthday message
-            */
+            /* Show surprise message */
 
             document
                 .getElementById("surprise")
@@ -557,9 +553,7 @@
                 .remove("hidden");
 
 
-            /*
-                Birthday emojis
-            */
+            /* Birthday emojis */
 
             const emojis = [
 
@@ -577,9 +571,7 @@
             ];
 
 
-            /*
-                Create floating emojis
-            */
+            /* Create floating emojis */
 
             for (
                 let i = 0;
@@ -592,7 +584,9 @@
 
 
                     const heart =
-                        document.createElement("div");
+                        document.createElement(
+                            "div"
+                        );
 
 
                     heart.className =
@@ -615,7 +609,10 @@
 
 
                     heart.style.animationDuration =
-                        (3 + Math.random() * 3)
+                        (
+                            3 +
+                            Math.random() * 3
+                        )
                         + "s";
 
 
@@ -624,9 +621,7 @@
                     );
 
 
-                    /*
-                        Remove emoji
-                    */
+                    /* Remove emoji */
 
                     setTimeout(() => {
 
