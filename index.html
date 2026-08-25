@@ -1,394 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Nameera Ji 🎂</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <title>Happy Birthday Nameera Ji 🎂</title>
 
-body {
-    min-height: 100vh;
-    font-family: Georgia, "Times New Roman", serif;
-    background:
-        radial-gradient(circle at 20% 20%, #ffffff 0 2px, transparent 3px),
-        linear-gradient(135deg, #fff3f7, #ffd8e7, #fff8fb);
-    color: #5b1737;
-    overflow-x: hidden;
-}
+    <style>
 
-/* Main Card */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.card {
-    width: min(1050px, 96vw);
-    padding: 25px;
-    border-radius: 32px;
-    background: rgba(255,255,255,0.65);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255,255,255,0.9);
-    box-shadow: 0 25px 80px rgba(120,30,70,0.2);
-}
+        body {
+            min-height: 100vh;
+            font-family: Georgia, "Times New Roman", serif;
 
-/* Heading */
-.top {
-    text-align: center;
-    padding: 10px 10px 25px;
-}
+            background:
+                radial-gradient(circle at 10% 20%, #ffffff 0 2px, transparent 3px),
+                radial-gradient(circle at 80% 30%, #ffffff 0 2px, transparent 3px),
+                radial-gradient(circle at 40% 80%, #ffffff 0 2px, transparent 3px),
+                linear-gradient(
+                    135deg,
+                    #fff3f7,
+                    #ffd6e6,
+                    #fff8fb
+                );
 
-.small {
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 12px;
-    color: #a94b70;
-}
+            color: #5b1737;
+            overflow-x: hidden;
+        }
 
-h1 {
-    font-size: clamp(45px, 7vw, 82px);
-    line-height: 0.95;
-    margin: 15px 0;
-    color: #d64276;
-    text-shadow: 0 5px 20px rgba(214,66,118,0.2);
-}
 
-.subtitle {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: #7b4960;
-}
+        /* MAIN SECTION */
 
-/* Age Circle */
-.age {
-    margin: 18px auto 0;
-    width: 105px;
-    height: 105px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        .hero {
+            min-height: 100vh;
 
-    background: linear-gradient(145deg, #ffffff, #ffd0df);
-    border: 2px solid #f08bab;
-    box-shadow: 0 10px 30px rgba(210,62,111,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    color: #c92f68;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-}
+            padding: 25px;
+        }
 
-.age span {
-    font-size: 11px;
-    letter-spacing: 2px;
-}
 
-/* Image */
-.photo-wrap {
-    display: flex;
-    justify-content: center;
-}
+        /* CARD */
 
-.photo {
-    width: min(620px, 95%);
-    display: block;
-    border-radius: 25px;
-    border: 8px solid white;
-    box-shadow: 0 20px 55px rgba(91,23,55,0.25);
-}
+        .card {
+            width: min(900px, 95vw);
 
-/* Message */
-.message {
-    max-width: 780px;
-    margin: 30px auto 10px;
-    padding: 30px 25px;
-    text-align: center;
+            padding: 45px 30px;
 
-    border-radius: 24px;
-    background: rgba(255,244,248,0.95);
-    border: 1px solid #f5c4d3;
-}
+            text-align: center;
 
-.message h2 {
-    font-size: 30px;
-    color: #ca356d;
-    margin-bottom: 14px;
-}
+            border-radius: 35px;
 
-.message p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #704258;
-}
+            background: rgba(255, 255, 255, 0.65);
 
-/* Button */
-button {
-    margin-top: 20px;
-    padding: 14px 28px;
+            backdrop-filter: blur(15px);
 
-    border: none;
-    border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.9);
 
-    background: #d94277;
-    color: white;
+            box-shadow:
+                0 30px 80px rgba(120, 30, 70, 0.18);
+        }
 
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
 
-    cursor: pointer;
+        /* SMALL TEXT */
 
-    box-shadow: 0 10px 25px rgba(217,66,119,0.3);
-    transition: 0.25s;
-}
+        .small-text {
+            font-family: Arial, sans-serif;
 
-button:hover {
-    transform: translateY(-3px) scale(1.03);
-}
+            font-size: 12px;
 
-/* Surprise */
-#surprise {
-    margin-top: 25px;
-    font-size: 20px;
-    line-height: 1.8;
-    color: #b72e60;
-    animation: fadeIn 0.7s ease;
-}
+            letter-spacing: 4px;
 
-.hidden {
-    display: none;
-}
+            text-transform: uppercase;
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
+            color: #a94b70;
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+            margin-bottom: 15px;
+        }
 
-/* Footer */
-.footer {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: #a35a76;
-    font-size: 13px;
-    padding-top: 18px;
-}
 
-/* Floating Hearts */
-.heart {
-    position: fixed;
-    bottom: -40px;
-    font-size: 25px;
-    pointer-events: none;
-    z-index: 100;
-    animation: rise linear forwards;
-}
+        /* TITLE */
 
-@keyframes rise {
-    from {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
+        h1 {
+            font-size: clamp(45px, 8vw, 85px);
 
-    to {
-        transform: translateY(-110vh) rotate(35deg);
-        opacity: 0;
-    }
-}
+            line-height: 0.95;
 
-/* Mobile */
-@media(max-width:600px) {
+            color: #d64276;
 
-    .hero {
-        padding: 12px;
-    }
+            margin-bottom: 20px;
 
-    .card {
-        padding: 12px;
-        border-radius: 24px;
-    }
+            text-shadow:
+                0 5px 20px rgba(214, 66, 118, 0.18);
+        }
 
-    h1 {
-        font-size: 48px;
-    }
 
-    .photo {
-        width: 100%;
-        border-width: 5px;
-    }
+        /* SUBTITLE */
 
-    .message {
-        padding: 22px 15px;
-    }
+        .subtitle {
+            font-family: Arial, sans-serif;
 
-    .message p {
-        font-size: 16px;
-    }
-}
-</style>
+            font-size: 18px;
+
+            color: #7b4960;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* AGE */
+
+        .age {
+            width: 115px;
+            height: 115px;
+
+            margin: 0 auto 30px;
+
+            border-radius: 50%;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #ffd0df
+                );
+
+            border: 2px solid #f08bab;
+
+            box-shadow:
+                0 10px 30px rgba(210, 62, 111, 0.20);
+
+            color: #c92f68;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 34px;
+
+            font-weight: bold;
+
+            animation: floating 3s ease-in-out infinite;
+        }
+
+
+        .age span {
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            margin-top: 3px;
+        }
+
+
+        /* MESSAGE BOX */
+
+        .message {
+            max-width: 750px;
+
+            margin: auto;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            background: rgba(255, 244, 248, 0.95);
+
+            border: 1px solid #f5c4d3;
+
+            box-shadow:
+                0 10px 30px rgba(180, 60, 100, 0.08);
+        }
+
+
+        .message h2 {
+            font-size: 30px;
+
+            color: #ca356d;
+
+            margin-bottom: 18px;
+        }
+
+
+        .message p {
+            font-size: 18px;
+
+            line-height: 1.9;
+
+            color: #704258;
+        }
+
+
+        /* BUTTON */
+
+        .surprise-btn {
+            margin-top: 25px;
+
+            padding: 15px 30px;
+
+            border: none;
+
+            border-radius: 50px;
+
+            background: #d94277;
+
+            color: white;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 25px rgba(217, 66, 119, 0.3);
+
+            transition: 0.25s;
+        }
+
+
+        .surprise-btn:hover {
+            transform:
+                translateY(-3px)
+                scale(1.04);
+
+            box-shadow:
+                0 15px 35px rgba(217, 66, 119, 0.4);
+        }
+
+
+        /* SURPRISE MESSAGE */
+
+        #surprise {
+            margin-top: 25px;
+
+            font-size: 20px;
+
+            line-height: 1.8;
+
+            color: #b72e60;
+
+            animation: fadeIn 0.7s ease;
+        }
+
+
+        .hidden {
+            display: none;
+        }
+
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 25px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            color: #a35a76;
+        }
+
+
+        /* FLOATING EMOJIS */
+
+        .floating-heart {
+            position: fixed;
+
+            bottom: -50px;
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            z-index: 999;
+
+            animation:
+                rise linear forwards;
+        }
+
+
+        @keyframes rise {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(-110vh)
+                    rotate(40deg);
+
+                opacity: 0;
+            }
+
+        }
+
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+                transform:
+                    translateY(-8px);
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 12px;
+            }
+
+
+            .card {
+                padding: 35px 15px;
+
+                border-radius: 25px;
+            }
+
+
+            h1 {
+                font-size: 48px;
+            }
+
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+
+            .message {
+                padding: 25px 15px;
+            }
+
+
+            .message h2 {
+                font-size: 25px;
+            }
+
+
+            .message p {
+                font-size: 16px;
+            }
+
+
+            .age {
+                width: 100px;
+                height: 100px;
+
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
-<section class="hero">
 
-<div class="card">
+    <section class="hero">
 
-    <!-- Heading -->
-    <div class="top">
+        <div class="card">
 
-        <div class="small">
-            A Little Birthday Surprise ✨
+
+            <!-- TOP -->
+
+            <div class="small-text">
+                A Little Birthday Surprise ✨
+            </div>
+
+
+            <h1>
+                Happy Birthday
+                <br>
+                Nameera Ji 💗
+            </h1>
+
+
+            <div class="subtitle">
+                To someone truly cute, kind & special 🌸
+            </div>
+
+
+            <!-- AGE -->
+
+            <div class="age">
+
+                21
+
+                <span>
+                    YEARS
+                </span>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="message">
+
+
+                <h2>
+                    For You, Nameera Ji 🌷
+                </h2>
+
+
+                <p>
+
+                    May your 21st birthday bring you
+                    endless smiles, beautiful memories,
+                    lots of love and all the happiness
+                    you truly deserve. 💗
+
+                    <br>
+                    <br>
+
+                    May every new day bring you
+                    closer to your dreams.
+
+                    Keep smiling,
+                    keep shining,
+                    and always stay this cute. ✨
+
+                    <br>
+                    <br>
+
+                    You deserve nothing but the
+                    best in life. 💕
+
+
+                </p>
+
+
+                <!-- BUTTON -->
+
+                <button
+                    class="surprise-btn"
+                    onclick="openSurprise()">
+
+                    Open Your Little Surprise 🎁
+
+                </button>
+
+
+                <!-- HIDDEN MESSAGE -->
+
+                <div
+                    id="surprise"
+                    class="hidden">
+
+
+                    🎈 21 looks beautiful on you! 🎈
+
+                    <br>
+                    <br>
+
+                    May this new chapter of your life
+                    be filled with happiness,
+                    success, love and unforgettable
+                    memories. 💖
+
+                    <br>
+                    <br>
+
+                    <strong>
+
+                        Happy Birthday once again,
+                        Nameera Ji! 🥳🎂💗
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="footer">
+
+                Made with ❤️ specially for Nameera Ji
+
+            </div>
+
+
         </div>
 
-        <h1>
-            Happy Birthday<br>
-            Nameera Ji 💗
-        </h1>
-
-        <div class="subtitle">
-            To someone truly cute, kind & special 🌸
-        </div>
-
-        <div class="age">
-            21
-            <span>YEARS</span>
-        </div>
-
-    </div>
-
- <!-- Birthday Message -->
-    <div class="message">
-
-        <h2>
-            For You, Nameera Ji 🌷
-        </h2>
-
-        <p>
-            May your 21st birthday bring you endless smiles,
-            beautiful memories, lots of love and all the happiness
-            you truly deserve. 💗
-            <br><br>
-
-            Keep smiling, keep shining and always stay this cute. ✨
-        </p>
+    </section>
 
 
-        <button onclick="surprise()">
-            Open a Little Surprise 🎁
-        </button>
+    <script>
 
 
-        <div id="surprise" class="hidden">
-
-            🎈 21 looks beautiful on you! 🎈
-
-            <br>
-
-            May this new chapter of your life
-            be your happiest one yet. 💕
-
-            <br><br>
-
-            <strong>
-                Happy Birthday once again,
-                Nameera Ji! 🥳🎂💖
-            </strong>
-
-        </div>
-
-    </div>
+        function openSurprise() {
 
 
-    <div class="footer">
-        Made with ❤️ specially for Nameera Ji
-    </div>
+            /*
+                Show hidden birthday message
+            */
 
-</div>
-
-</section>
-
-
-<script>
-
-function surprise() {
-
-    // Show message
-    document
-        .getElementById("surprise")
-        .classList
-        .remove("hidden");
+            document
+                .getElementById("surprise")
+                .classList
+                .remove("hidden");
 
 
-    // Floating emojis
-    const emojis = [
-        "💗",
-        "💕",
-        "✨",
-        "🌸",
-        "🎈",
-        "🥳",
-        "💖",
-        "🎉",
-        "🌷"
-    ];
+            /*
+                Birthday emojis
+            */
+
+            const emojis = [
+
+                "💗",
+                "💕",
+                "💖",
+                "✨",
+                "🌸",
+                "🌷",
+                "🎈",
+                "🎉",
+                "🥳",
+                "🎂"
+
+            ];
 
 
-    for (let i = 0; i < 50; i++) {
+            /*
+                Create floating emojis
+            */
 
-        setTimeout(() => {
-
-            const heart = document.createElement("div");
-
-            heart.className = "heart";
-
-            heart.innerText =
-                emojis[
-                    Math.floor(
-                        Math.random() * emojis.length
-                    )
-                ];
-
-            heart.style.left =
-                Math.random() * 100 + "vw";
-
-            heart.style.animationDuration =
-                (3 + Math.random() * 3) + "s";
+            for (
+                let i = 0;
+                i < 60;
+                i++
+            ) {
 
 
-            document.body.appendChild(heart);
+                setTimeout(() => {
 
 
-            setTimeout(() => {
-                heart.remove();
-            }, 6500);
+                    const heart =
+                        document.createElement("div");
 
-        }, i * 50);
 
-    }
+                    heart.className =
+                        "floating-heart";
 
-}
 
-</script>
+                    heart.innerText =
+                        emojis[
+                            Math.floor(
+                                Math.random()
+                                * emojis.length
+                            )
+                        ];
+
+
+                    heart.style.left =
+                        Math.random()
+                        * 100
+                        + "vw";
+
+
+                    heart.style.animationDuration =
+                        (3 + Math.random() * 3)
+                        + "s";
+
+
+                    document.body.appendChild(
+                        heart
+                    );
+
+
+                    /*
+                        Remove emoji
+                    */
+
+                    setTimeout(() => {
+
+                        heart.remove();
+
+                    }, 6500);
+
+
+                }, i * 45);
+
+            }
+
+        }
+
+
+    </script>
+
 
 </body>
+
 </html>
