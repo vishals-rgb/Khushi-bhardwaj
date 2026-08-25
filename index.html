@@ -1,474 +1,407 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nameera Ji 🎂</title>
 
-  <title>Happy Birthday Nameera Ji 🎂</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+body {
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    background:
+        radial-gradient(circle at 20% 20%, #ffffff 0 2px, transparent 3px),
+        linear-gradient(135deg, #fff3f7, #ffd8e7, #fff8fb);
+    color: #5b1737;
+    overflow-x: hidden;
+}
+
+/* Main Card */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.card {
+    width: min(1050px, 96vw);
+    padding: 25px;
+    border-radius: 32px;
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: 0 25px 80px rgba(120,30,70,0.2);
+}
+
+/* Heading */
+.top {
+    text-align: center;
+    padding: 10px 10px 25px;
+}
+
+.small {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #a94b70;
+}
+
+h1 {
+    font-size: clamp(45px, 7vw, 82px);
+    line-height: 0.95;
+    margin: 15px 0;
+    color: #d64276;
+    text-shadow: 0 5px 20px rgba(214,66,118,0.2);
+}
+
+.subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #7b4960;
+}
+
+/* Age Circle */
+.age {
+    margin: 18px auto 0;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(145deg, #ffffff, #ffd0df);
+    border: 2px solid #f08bab;
+    box-shadow: 0 10px 30px rgba(210,62,111,0.2);
+
+    color: #c92f68;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.age span {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* Image */
+.photo-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.photo {
+    width: min(620px, 95%);
+    display: block;
+    border-radius: 25px;
+    border: 8px solid white;
+    box-shadow: 0 20px 55px rgba(91,23,55,0.25);
+}
+
+/* Message */
+.message {
+    max-width: 780px;
+    margin: 30px auto 10px;
+    padding: 30px 25px;
+    text-align: center;
+
+    border-radius: 24px;
+    background: rgba(255,244,248,0.95);
+    border: 1px solid #f5c4d3;
+}
+
+.message h2 {
+    font-size: 30px;
+    color: #ca356d;
+    margin-bottom: 14px;
+}
+
+.message p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #704258;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: #d94277;
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(217,66,119,0.3);
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+/* Surprise */
+#surprise {
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #b72e60;
+    animation: fadeIn 0.7s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
     }
 
-    body {
-      min-height: 100vh;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(
-        135deg,
-        #ffd6e7,
-        #fff0f6,
-        #f5d9ff
-      );
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+/* Footer */
+.footer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #a35a76;
+    font-size: 13px;
+    padding-top: 18px;
+}
 
-      overflow: hidden;
-      color: #5d3650;
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 25px;
+    pointer-events: none;
+    z-index: 100;
+    animation: rise linear forwards;
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
     }
 
-    .container {
-      width: 90%;
-      max-width: 700px;
-      text-align: center;
-      position: relative;
-      z-index: 5;
+    to {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+/* Mobile */
+@media(max-width:600px) {
+
+    .hero {
+        padding: 12px;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.68);
-      backdrop-filter: blur(18px);
-
-      border: 1px solid rgba(255, 255, 255, 0.8);
-
-      border-radius: 32px;
-
-      padding: 45px 30px;
-
-      box-shadow:
-        0 20px 60px rgba(160, 75, 120, 0.2);
-
-      animation: appear 1.4s ease;
-    }
-
-    .small {
-      font-size: 14px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-
-      color: #a45c80;
-
-      margin-bottom: 15px;
+        padding: 12px;
+        border-radius: 24px;
     }
 
     h1 {
-      font-family: Georgia, serif;
-
-      font-size: clamp(45px, 10vw, 75px);
-
-      color: #8f4269;
-
-      margin-bottom: 5px;
-
-      animation: glow 2s infinite alternate;
+        font-size: 48px;
     }
 
-    .age {
-      font-size: 22px;
-
-      color: #a45c80;
-
-      margin-bottom: 25px;
-    }
-
-    .cake {
-      font-size: 90px;
-
-      margin: 15px 0;
-
-      animation: bounce 2s infinite;
+    .photo {
+        width: 100%;
+        border-width: 5px;
     }
 
     .message {
-      font-size: 17px;
-
-      line-height: 1.8;
-
-      max-width: 560px;
-
-      margin: 0 auto 28px;
-
-      color: #654457;
+        padding: 22px 15px;
     }
 
-    button {
-      border: none;
-
-      padding: 15px 32px;
-
-      border-radius: 50px;
-
-      background: linear-gradient(
-        135deg,
-        #d86c9b,
-        #a94f79
-      );
-
-      color: white;
-
-      font-size: 16px;
-
-      cursor: pointer;
-
-      box-shadow:
-        0 10px 25px rgba(169, 79, 121, 0.3);
-
-      transition: 0.3s;
+    .message p {
+        font-size: 16px;
     }
-
-    button:hover {
-      transform: translateY(-4px) scale(1.03);
-
-      box-shadow:
-        0 15px 30px rgba(169, 79, 121, 0.4);
-    }
-
-    .surprise {
-      display: none;
-
-      margin-top: 28px;
-
-      animation: fadeUp 1s ease;
-    }
-
-    .surprise p {
-      font-family: Georgia, serif;
-
-      font-size: 21px;
-
-      line-height: 1.7;
-
-      color: #803d5f;
-    }
-
-    .signature {
-      margin-top: 18px;
-
-      font-size: 14px;
-
-      color: #a45c80;
-    }
-
-    .heart {
-      position: fixed;
-
-      bottom: -30px;
-
-      font-size: 20px;
-
-      animation: floatUp linear forwards;
-
-      opacity: 0.8;
-
-      z-index: 1;
-    }
-
-    .star {
-      position: fixed;
-
-      color: white;
-
-      font-size: 18px;
-
-      animation: twinkle 2s infinite alternate;
-
-      z-index: 1;
-    }
-
-    @keyframes appear {
-      from {
-        opacity: 0;
-        transform: translateY(40px) scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow:
-          0 0 5px rgba(216, 108, 155, 0.2);
-      }
-
-      to {
-        text-shadow:
-          0 0 25px rgba(216, 108, 155, 0.5);
-      }
-    }
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    @keyframes floatUp {
-      from {
-        transform:
-          translateY(0)
-          rotate(0deg);
-
-        opacity: 0;
-      }
-
-      10% {
-        opacity: 0.8;
-      }
-
-      to {
-        transform:
-          translateY(-110vh)
-          rotate(360deg);
-
-        opacity: 0;
-      }
-    }
-
-    @keyframes twinkle {
-      from {
-        opacity: 0.2;
-        transform: scale(0.8);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1.2);
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .card {
-        padding: 35px 20px;
-      }
-
-      .message {
-        font-size: 15px;
-      }
-
-      .cake {
-        font-size: 75px;
-      }
-
-      .surprise p {
-        font-size: 18px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
+
 
 <body>
 
-  <div class="container">
+<section class="hero">
 
-    <div class="card">
+<div class="card">
 
-      <div class="small">
-        A Little Surprise For You ✨
-      </div>
+    <!-- Heading -->
+    <div class="top">
 
-      <h1>Nameera Ji</h1>
-
-      <div class="age">
-        Happy 21st Birthday 💗
-      </div>
-
-      <div class="cake">
-        🎂
-      </div>
-
-      <p class="message">
-
-        Today isn't just another day...
-
-        It's the day someone really special
-        came into this world. 🌸
-
-        <br><br>
-
-        I hope your 21st year brings you
-        endless smiles, beautiful memories,
-        peaceful moments and all the happiness
-        your heart deserves. 🥹💗
-
-      </p>
-
-      <button onclick="showSurprise()">
-        Open Your Surprise 🎁
-      </button>
-
-      <div class="surprise" id="surprise">
-
-        <p>
-
-          Dear Nameera Ji 💕
-
-          <br><br>
-
-          May you always have a reason to smile,
-          someone to make you laugh,
-          and countless little moments
-          that make life beautiful. ✨
-
-          <br><br>
-
-          Keep being the cute and amazing
-          person you are.
-
-          Never stop dreaming,
-          never stop smiling,
-          and most importantly...
-
-          always stay happy. 🌷
-
-          <br><br>
-
-          Happy 21st Birthday once again! 🎂💗
-
-        </p>
-
-        <div class="signature">
-          With lots of love & good wishes ✨
+        <div class="small">
+            A Little Birthday Surprise ✨
         </div>
 
-      </div>
+        <h1>
+            Happy Birthday<br>
+            Nameera Ji 💗
+        </h1>
+
+        <div class="subtitle">
+            To someone truly cute, kind & special 🌸
+        </div>
+
+        <div class="age">
+            21
+            <span>YEARS</span>
+        </div>
 
     </div>
 
-  </div>
 
-  <script>
+    <!-- Birthday Image -->
+    <div class="photo-wrap">
 
-    function showSurprise() {
+        <img
+            class="photo"
+            src="nameera-birthday.png"
+            alt="Happy Birthday Nameera Ji"
+        >
 
-      const surprise =
-        document.getElementById("surprise");
-
-      surprise.style.display = "block";
-
-      createHearts(25);
-
-      document.querySelector("button").innerHTML =
-        "You Deserve All The Happiness 💗";
-    }
+    </div>
 
 
-    function createHeart() {
+    <!-- Birthday Message -->
+    <div class="message">
 
-      const heart =
-        document.createElement("div");
+        <h2>
+            For You, Nameera Ji 🌷
+        </h2>
 
-      heart.className = "heart";
+        <p>
+            May your 21st birthday bring you endless smiles,
+            beautiful memories, lots of love and all the happiness
+            you truly deserve. 💗
+            <br><br>
 
-      const hearts = [
+            Keep smiling, keep shining and always stay this cute. ✨
+        </p>
+
+
+        <button onclick="surprise()">
+            Open a Little Surprise 🎁
+        </button>
+
+
+        <div id="surprise" class="hidden">
+
+            🎈 21 looks beautiful on you! 🎈
+
+            <br>
+
+            May this new chapter of your life
+            be your happiest one yet. 💕
+
+            <br><br>
+
+            <strong>
+                Happy Birthday once again,
+                Nameera Ji! 🥳🎂💖
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        Made with ❤️ specially for Nameera Ji
+    </div>
+
+</div>
+
+</section>
+
+
+<script>
+
+function surprise() {
+
+    // Show message
+    document
+        .getElementById("surprise")
+        .classList
+        .remove("hidden");
+
+
+    // Floating emojis
+    const emojis = [
         "💗",
         "💕",
-        "💖",
-        "🌸",
         "✨",
-        "💞"
-      ];
-
-      heart.innerHTML =
-        hearts[
-          Math.floor(
-            Math.random() * hearts.length
-          )
-        ];
-
-      heart.style.left =
-        Math.random() * 100 + "vw";
-
-      heart.style.animationDuration =
-        (5 + Math.random() * 5) + "s";
-
-      heart.style.fontSize =
-        (15 + Math.random() * 20) + "px";
-
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 10000);
-    }
+        "🌸",
+        "🎈",
+        "🥳",
+        "💖",
+        "🎉",
+        "🌷"
+    ];
 
 
-    function createHearts(amount = 8) {
+    for (let i = 0; i < 50; i++) {
 
-      for (let i = 0; i < amount; i++) {
+        setTimeout(() => {
 
-        setTimeout(
-          createHeart,
-          i * 150
-        );
+            const heart = document.createElement("div");
 
-      }
-    }
+            heart.className = "heart";
+
+            heart.innerText =
+                emojis[
+                    Math.floor(
+                        Math.random() * emojis.length
+                    )
+                ];
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+            heart.style.animationDuration =
+                (3 + Math.random() * 3) + "s";
 
 
-    setInterval(createHeart, 900);
+            document.body.appendChild(heart);
 
 
-    // Create background stars
+            setTimeout(() => {
+                heart.remove();
+            }, 6500);
 
-    for (let i = 0; i < 30; i++) {
-
-      const star =
-        document.createElement("div");
-
-      star.className = "star";
-
-      star.innerHTML = "✦";
-
-      star.style.left =
-        Math.random() * 100 + "vw";
-
-      star.style.top =
-        Math.random() * 100 + "vh";
-
-      star.style.animationDelay =
-        Math.random() * 2 + "s";
-
-      document.body.appendChild(star);
+        }, i * 50);
 
     }
 
-  </script>
+}
+
+</script>
 
 </body>
 </html>
-```
